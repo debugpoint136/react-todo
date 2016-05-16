@@ -11,7 +11,7 @@ describe('AddTodo', () => {
     expect(AddTodo).toExist();
   });
 
-  if('should call onAddTodo prop with valid data', () => {
+  it('should call onAddTodo prop with valid data', () => {
     var todoText = 'Check mail';
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
@@ -23,7 +23,7 @@ describe('AddTodo', () => {
     expect(spy).toHaveBeenCalledWith(todoText);
   });
 
-  if('should call onAddTodo prop when invalid input', () => {
+  it('should call onAddTodo prop when invalid input', () => {
     var todoText = '';
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo onAddTodo={spy}/>);
